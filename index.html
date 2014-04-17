@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test: D3</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<header>D3 Library</header>
+
+	<p>font 4 px</p>
+	<p>font 8 px</p>
+	<p>font 12 px</p>
+	<p>font 16 px</p>
+
+
+
+    <script src="d3/d3.js" charset="utf-8"></script>
+    <script>
+	d3.selectAll("p")
+	    .data([10, 20, 30, 40])
+	    .style("font-size", function(d) { return d + "px"; });
+    </script>
+</body>
+</html>
