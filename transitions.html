@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transitions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+  <div id="square"></div>
+  <button id="yellow-button" class="button">Click me to make it yellow!</button>
+
+
+
+  <script src="d3/d3.js" charset="utf-8"></script>
+  <script>
+  var svg = d3.select('#square').append('svg')
+      .attr('width', 500)
+      .attr('height', 500);
+
+  var square = svg.append('rect')
+        .attr('width', 80)
+        .attr('height', 80)
+        .style('fill', 'red');
+
+  $('#yellow-button').click(function() {
+    square.transition()
+        .duration(1000)
+        .delay(100)
+        .style('fill', 'yellow');
+  })
+
+
+  </script>
+</body>
+</html>
